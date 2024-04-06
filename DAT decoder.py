@@ -1,5 +1,7 @@
 import re
 
+DAT_FILE_PATH = r"../save.dat" # CHANGE TO SAVE.DAT PATH
+
 class Decoder:
     Values = [
         "graphic_detail", "sfx_vol", "defaultScrollProgress", "music_vol",
@@ -110,7 +112,7 @@ class Decoder:
         buffer = ""
         cbuffer = 0
         pbuffer = -1
-        
+
         password = password.replace('rid','')
 
         for offset in range(-128, 128):
@@ -128,7 +130,6 @@ class Decoder:
         return result
 
 if __name__ == "__main__":
-    dat_file_path = r"../save.dat" # CHANGE TO SAVE.DAT PATH
-    decoder = Decoder(dat_file_path)
+    decoder = Decoder(DAT_FILE_PATH)
     decoded_content = decoder.DecodeFile()
     print(decoded_content)
