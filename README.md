@@ -1,13 +1,16 @@
 # Growtopia Save.dat file decoder
 
-This Python script attempts to decode and display the values from the save.dat file.
+A Python script that attempts to decode and display the values from the save.dat file.
 
-Heavily inspired by the classic discontinued open-source [GABB External](https://github.com/SrMotion/GABB-Source) by SrMotion.
+![Terminal](https://i.imgur.com/74hvVIZ.png)
 
+The code is heavily inspired by the classic discontinued open-source [GABB External](https://github.com/SrMotion/GABB-Source) by SrMotion.
 
 ## Requirements
-no libraries were used.
-
+The `pprint` library is a built-in Python library. If it’s missing by any chance, you can install it by running the following command in your command prompt:
+```
+pip install pprint
+```
 ## Execution
 Before running the `.py` file, make sure to update the `DAT_FILE_PATH` constant in the first few lines of the script.
 ## DISCLAIMER

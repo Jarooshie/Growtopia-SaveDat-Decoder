@@ -1,3 +1,5 @@
+from pprint import pprint
+
 DAT_FILE_PATH = r"../save.dat" # CHANGE TO SAVE.DAT PATH
 
 class Decoder:
@@ -126,8 +128,11 @@ class Decoder:
                 elif self.useFilter and pbuffer != -1 and self.toLowercase(result[pbuffer]) == self.toLowercase(buffer):
                     result[pbuffer] = buffer
         return result
+    
+pause = lambda: input()
 
 if __name__ == "__main__":
     decoder = Decoder(DAT_FILE_PATH)
     decoded_content = decoder.DecodeFile()
-    print(decoded_content)
+    pprint(decoded_content)
+    pause()
