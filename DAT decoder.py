@@ -1,5 +1,3 @@
-import re
-
 DAT_FILE_PATH = r"../save.dat" # CHANGE TO SAVE.DAT PATH
 
 class Decoder:
