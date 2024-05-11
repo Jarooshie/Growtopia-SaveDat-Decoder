@@ -1,6 +1,6 @@
 from pprint import pprint
 
-DAT_FILE_PATH = r"../save.dat" # CHANGE TO SAVE.DAT PATH
+DAT_FILE_PATH = r"path goes here"
 
 class Decoder:
     Values = [
@@ -30,7 +30,7 @@ class Decoder:
             with open(path, 'rb') as file:
                 content = file.read()
                 self.pSize = len(content)
-                self.pChars = content.decode('utf-8', errors='ignore')
+                self.pChars = content.decode('latin-1', errors='ignore')
                 return True
         except Exception as e:
             print(f"An error occurred while reading save file: {e}")
@@ -129,10 +129,7 @@ class Decoder:
                     result[pbuffer] = buffer
         return result
     
-pause = lambda: input()
-
 if __name__ == "__main__":
     decoder = Decoder(DAT_FILE_PATH)
     decoded_content = decoder.DecodeFile()
     pprint(decoded_content)
-    pause()
